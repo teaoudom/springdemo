@@ -9,6 +9,7 @@ import java.util.Optional;
 @Repository
 public interface StudentRepository extends JpaRepository<Student,Long> {
     //optional : select * from student where email=@email
+    //add another comment for testing git update file
     @Query("select s from Student s where s.email=?1")
     Optional<Student> findStudentByEmail(String email);
 }
